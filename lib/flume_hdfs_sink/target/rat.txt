@@ -1,0 +1,70 @@
+
+*****************************************************
+Summary
+-------
+Generated at: 2017-01-21T13:06:03+08:00
+Notes: 0
+Binaries: 0
+Archives: 0
+Standards: 33
+
+Apache Licensed: 33
+Generated Documents: 0
+
+JavaDocs are generated and so license header is optional
+Generated files do not required license headers
+
+0 Unknown Licenses
+
+*******************************
+
+Unapproved licenses:
+
+
+*******************************
+
+Archives:
+
+*****************************************************
+  Files with Apache License headers will be marked AL
+  Binary files (which do not require AL headers) will be marked B
+  Compressed archives will be marked A
+  Notices, licenses etc will be marked N
+  AL    src/main/java/org/apache/flume/sink/s3/FlumeAwsS3.java
+  AL    src/main/java/org/apache/flume/sink/hdfs/SequenceFileSerializerFactory.java
+  AL    src/main/java/org/apache/flume/sink/hdfs/HDFSSequenceFile.java
+  AL    src/main/java/org/apache/flume/sink/hdfs/HDFSDataStream.java
+  AL    src/main/java/org/apache/flume/sink/hdfs/HDFSWriterFactory.java
+  AL    src/main/java/org/apache/flume/sink/hdfs/HDFSWritableSerializer.java
+  AL    src/main/java/org/apache/flume/sink/hdfs/BucketWriter.java
+  AL    src/main/java/org/apache/flume/sink/hdfs/AvroEventSerializer.java
+  AL    src/main/java/org/apache/flume/sink/hdfs/HDFSCompressedDataStream.java
+  AL    src/main/java/org/apache/flume/sink/hdfs/SequenceFileSerializer.java
+  AL    src/main/java/org/apache/flume/sink/hdfs/AbstractHDFSWriter.java
+  AL    src/main/java/org/apache/flume/sink/hdfs/KerberosUser.java
+  AL    src/main/java/org/apache/flume/sink/hdfs/BucketClosedException.java
+  AL    src/main/java/org/apache/flume/sink/hdfs/HDFSWriter.java
+  AL    src/main/java/org/apache/flume/sink/hdfs/HDFSTextSerializer.java
+  AL    src/main/java/org/apache/flume/sink/hdfs/SequenceFileSerializerType.java
+  AL    src/main/java/org/apache/flume/sink/hdfs/HDFSEventSink.java
+  AL    src/test/java/org/apache/flume/sink/hdfs/MockFileSystem.java
+  AL    src/test/java/org/apache/flume/sink/hdfs/HDFSTestSeqWriter.java
+  AL    src/test/java/org/apache/flume/sink/hdfs/MyCustomSerializer.java
+  AL    src/test/java/org/apache/flume/sink/hdfs/TestHDFSEventSinkOnMiniCluster.java
+  AL    src/test/java/org/apache/flume/sink/hdfs/TestHDFSCompressedDataStream.java
+  AL    src/test/java/org/apache/flume/sink/hdfs/HDFSTestWriterFactory.java
+  AL    src/test/java/org/apache/flume/sink/hdfs/HDFSBadDataStream.java
+  AL    src/test/java/org/apache/flume/sink/hdfs/TestUseRawLocalFileSystem.java
+  AL    src/test/java/org/apache/flume/sink/hdfs/TestSequenceFileSerializerFactory.java
+  AL    src/test/java/org/apache/flume/sink/hdfs/TestHDFSEventSink.java
+  AL    src/test/java/org/apache/flume/sink/hdfs/MockHDFSWriter.java
+  AL    src/test/java/org/apache/flume/sink/hdfs/TestAvroEventSerializer.java
+  AL    src/test/java/org/apache/flume/sink/hdfs/MockFsDataOutputStream.java
+  AL    src/test/java/org/apache/flume/sink/hdfs/TestBucketWriter.java
+  AL    src/test/java/org/apache/flume/sink/hdfs/MockDataStream.java
+  AL    pom.xml
+ 
+*****************************************************
+ Printing headers for files without AL header...
+ 
+ 

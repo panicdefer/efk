@@ -1,0 +1,48 @@
+{
+  "version": 3,
+  "partitions": [
+    {
+      "partition": "aws-cn",
+      "partitionName": "AWS China",
+      "dnsSuffix": "amazonaws.com.cn",
+      "regionRegex": "^cn\\-\\w+\\-\\d+$",
+      "defaults": {
+        "hostname": "{service}.{region}.{dnsSuffix}",
+        "protocols": [
+          "https"
+        ],
+        "signatureVersions": [
+          "v4"
+        ]
+      },
+      "regions": {
+        "cn-north-1": {
+          "description": "China (Beijing)"
+        }
+      },
+      "services": {
+        "s3": {
+	  "partitionEndpoint": "cn-north-1",
+	  "isRegionalized" : true,
+          "defaults": {
+            "protocols": [
+              "http",
+              "https"
+            ],
+            "signatureVersions": [
+              "s3v4"
+            ]
+          },
+          "endpoints": {
+            "cn-north-1": {
+                    "hostname": "s3.cn-north-1.amazonaws.com.cn",
+		    "credentialScope": {
+                       "region": "cn-north-1"
+                     }
+              }
+          }
+        }
+      }
+    }
+  ]
+}

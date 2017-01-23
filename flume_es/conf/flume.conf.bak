@@ -1,0 +1,31 @@
+a1.sources = source1
+a1.channels = channel1
+a1.sinks = sink1
+
+a1.sources.source1.type = exec
+a1.sources.source1.command = tail -F /var/log/nginx/access.log
+a1.sources.source1.channels = channel1
+
+a1.sources.source1.interceptors = i1
+a1.sources.source1.interceptors.i1.type = timestamp
+
+a1.sinks.sink1.type = org.apache.flume.sink.elasticsearch.ElasticSearchSink
+a1.sinks.sink1.batchSize = 50
+a1.sinks.sink1.hostNames = 10.70.108.96:9200
+a1.sinks.sink1.indexName = hyku-test
+a1.sinks.sink1.indexType = hyku-yyyy-MM-dd
+a1.sinks.sink1.clusterName = hyku
+al.sinks.sink1.client = transport
+a1.sinks.sink1.serializer=org.apache.flume.sink.elasticsearch.ElasticSearchLogStashEventSerializer
+a1.sinks.sink1.serializer.fields=remote_addr http_x_forwarded_for remote_user request request_body request_uri status body_bytes_sent bytes_sent connection connection_requests msec pipe http_referer http_user_agent request_length request_time upstream_response_time time_local gzip_ratio
+a1.sinks.sink1.serializer.fields.status.serializer=int
+a1.sinks.sink1.serializer.fields.time_local.serializer=date
+a1.sinks.sink1.serializer.fields.time_local.format=dd/MMMMM/yyyy:HH:mm:ss z
+a1.sinks.sink1.serializer.fields.time_local.locale=en
+
+a1.channels.channel1.type = memory
+a1.channels.channel1.capacity = 100
+a1.channels.channel1.transactionCapacity = 80
+
+a1.sources.source1.channels = channel1
+a1.sinks.sink1.channel = channel1

@@ -1,0 +1,54 @@
+[2017-01-06T16:18:40,050][INFO ][o.e.n.Node               ] [hyku] initializing ...
+[2017-01-06T16:18:40,428][INFO ][o.e.e.NodeEnvironment    ] [hyku] using [1] data paths, mounts [[/ (/dev/sda1)]], net usable_space [824.4gb], net total_space [909gb], spins? [possibly], types [ext4]
+[2017-01-06T16:18:40,428][INFO ][o.e.e.NodeEnvironment    ] [hyku] heap size [1.9gb], compressed ordinary object pointers [true]
+[2017-01-06T16:18:40,429][INFO ][o.e.n.Node               ] [hyku] node name [hyku], node ID [UpeyeFY6R36ieP7iDZDqHQ]
+[2017-01-06T16:18:40,430][INFO ][o.e.n.Node               ] [hyku] version[5.1.1], pid[14172], build[5395e21/2016-12-06T12:36:15.409Z], OS[Linux/4.4.0-34-generic/amd64], JVM[Oracle Corporation/Java HotSpot(TM) 64-Bit Server VM/1.8.0_111/25.111-b14]
+[2017-01-06T16:18:42,777][INFO ][o.e.p.PluginsService     ] [hyku] loaded module [aggs-matrix-stats]
+[2017-01-06T16:18:42,778][INFO ][o.e.p.PluginsService     ] [hyku] loaded module [ingest-common]
+[2017-01-06T16:18:42,778][INFO ][o.e.p.PluginsService     ] [hyku] loaded module [lang-expression]
+[2017-01-06T16:18:42,778][INFO ][o.e.p.PluginsService     ] [hyku] loaded module [lang-groovy]
+[2017-01-06T16:18:42,778][INFO ][o.e.p.PluginsService     ] [hyku] loaded module [lang-mustache]
+[2017-01-06T16:18:42,778][INFO ][o.e.p.PluginsService     ] [hyku] loaded module [lang-painless]
+[2017-01-06T16:18:42,778][INFO ][o.e.p.PluginsService     ] [hyku] loaded module [percolator]
+[2017-01-06T16:18:42,778][INFO ][o.e.p.PluginsService     ] [hyku] loaded module [reindex]
+[2017-01-06T16:18:42,778][INFO ][o.e.p.PluginsService     ] [hyku] loaded module [transport-netty3]
+[2017-01-06T16:18:42,778][INFO ][o.e.p.PluginsService     ] [hyku] loaded module [transport-netty4]
+[2017-01-06T16:18:42,779][INFO ][o.e.p.PluginsService     ] [hyku] no plugins loaded
+[2017-01-06T16:18:45,823][INFO ][o.e.n.Node               ] [hyku] initialized
+[2017-01-06T16:18:45,824][INFO ][o.e.n.Node               ] [hyku] starting ...
+[2017-01-06T16:18:46,093][INFO ][o.e.t.TransportService   ] [hyku] publish_address {10.70.108.96:9300}, bound_addresses {[::]:9300}
+[2017-01-06T16:18:46,096][INFO ][o.e.b.BootstrapCheck     ] [hyku] bound or publishing to a non-loopback or non-link-local address, enforcing bootstrap checks
+[2017-01-06T16:18:49,169][INFO ][o.e.c.s.ClusterService   ] [hyku] new_master {hyku}{UpeyeFY6R36ieP7iDZDqHQ}{WvdK1Aa-TJauoDxvfl5f1A}{10.70.108.96}{10.70.108.96:9300}, reason: zen-disco-elected-as-master ([0] nodes joined)
+[2017-01-06T16:18:49,229][INFO ][o.e.h.HttpServer         ] [hyku] publish_address {10.70.108.96:9200}, bound_addresses {[::]:9200}
+[2017-01-06T16:18:49,229][INFO ][o.e.n.Node               ] [hyku] started
+[2017-01-06T16:18:49,287][INFO ][o.e.g.GatewayService     ] [hyku] recovered [0] indices into cluster_state
+[2017-01-06T16:28:28,799][INFO ][o.e.n.Node               ] [hyku] stopping ...
+[2017-01-06T16:28:28,913][INFO ][o.e.n.Node               ] [hyku] stopped
+[2017-01-06T16:28:28,913][INFO ][o.e.n.Node               ] [hyku] closing ...
+[2017-01-06T16:28:28,980][INFO ][o.e.n.Node               ] [hyku] closed
+[2017-01-06T16:29:28,460][INFO ][o.e.n.Node               ] [hyku] initializing ...
+[2017-01-06T16:29:28,812][INFO ][o.e.e.NodeEnvironment    ] [hyku] using [1] data paths, mounts [[/ (/dev/sda1)]], net usable_space [824.4gb], net total_space [909gb], spins? [possibly], types [ext4]
+[2017-01-06T16:29:28,812][INFO ][o.e.e.NodeEnvironment    ] [hyku] heap size [1.9gb], compressed ordinary object pointers [true]
+[2017-01-06T16:29:28,813][INFO ][o.e.n.Node               ] [hyku] node name [hyku], node ID [UpeyeFY6R36ieP7iDZDqHQ]
+[2017-01-06T16:29:28,839][INFO ][o.e.n.Node               ] [hyku] version[5.1.1], pid[14418], build[5395e21/2016-12-06T12:36:15.409Z], OS[Linux/4.4.0-34-generic/amd64], JVM[Oracle Corporation/Java HotSpot(TM) 64-Bit Server VM/1.8.0_111/25.111-b14]
+[2017-01-06T16:29:30,014][INFO ][o.e.p.PluginsService     ] [hyku] loaded module [aggs-matrix-stats]
+[2017-01-06T16:29:30,015][INFO ][o.e.p.PluginsService     ] [hyku] loaded module [ingest-common]
+[2017-01-06T16:29:30,015][INFO ][o.e.p.PluginsService     ] [hyku] loaded module [lang-expression]
+[2017-01-06T16:29:30,015][INFO ][o.e.p.PluginsService     ] [hyku] loaded module [lang-groovy]
+[2017-01-06T16:29:30,015][INFO ][o.e.p.PluginsService     ] [hyku] loaded module [lang-mustache]
+[2017-01-06T16:29:30,015][INFO ][o.e.p.PluginsService     ] [hyku] loaded module [lang-painless]
+[2017-01-06T16:29:30,015][INFO ][o.e.p.PluginsService     ] [hyku] loaded module [percolator]
+[2017-01-06T16:29:30,015][INFO ][o.e.p.PluginsService     ] [hyku] loaded module [reindex]
+[2017-01-06T16:29:30,015][INFO ][o.e.p.PluginsService     ] [hyku] loaded module [transport-netty3]
+[2017-01-06T16:29:30,015][INFO ][o.e.p.PluginsService     ] [hyku] loaded module [transport-netty4]
+[2017-01-06T16:29:30,015][INFO ][o.e.p.PluginsService     ] [hyku] no plugins loaded
+[2017-01-06T16:29:32,651][INFO ][o.e.n.Node               ] [hyku] initialized
+[2017-01-06T16:29:32,651][INFO ][o.e.n.Node               ] [hyku] starting ...
+[2017-01-06T16:29:32,838][INFO ][o.e.t.TransportService   ] [hyku] publish_address {10.70.108.96:9300}, bound_addresses {[::]:9300}
+[2017-01-06T16:29:32,841][INFO ][o.e.b.BootstrapCheck     ] [hyku] bound or publishing to a non-loopback or non-link-local address, enforcing bootstrap checks
+[2017-01-06T16:29:35,914][INFO ][o.e.c.s.ClusterService   ] [hyku] new_master {hyku}{UpeyeFY6R36ieP7iDZDqHQ}{mLlK7Cy7QPKsnO-YYxsblA}{10.70.108.96}{10.70.108.96:9300}, reason: zen-disco-elected-as-master ([0] nodes joined)
+[2017-01-06T16:29:35,981][INFO ][o.e.h.HttpServer         ] [hyku] publish_address {10.70.108.96:9200}, bound_addresses {[::]:9200}
+[2017-01-06T16:29:35,981][INFO ][o.e.n.Node               ] [hyku] started
+[2017-01-06T16:29:36,287][INFO ][o.e.g.GatewayService     ] [hyku] recovered [0] indices into cluster_state
+[2017-01-06T21:06:57,109][WARN ][o.e.m.j.JvmGcMonitorService] [hyku] [gc][young][16635][3] duration [5.9s], collections [1]/[6.9s], total [5.9s]/[6s], memory [309.3mb]->[173.1mb]/[1.9gb], all_pools {[young] [266.2mb]->[1mb]/[266.2mb]}{[survivor] [33.2mb]->[25.8mb]/[33.2mb]}{[old] [9.8mb]->[146.2mb]/[1.6gb]}
+[2017-01-06T21:06:57,145][WARN ][o.e.m.j.JvmGcMonitorService] [hyku] [gc][16635] overhead, spent [5.9s] collecting in the last [6.9s]

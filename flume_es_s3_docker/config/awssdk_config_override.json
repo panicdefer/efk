@@ -1,0 +1,36 @@
+{ // AWS Java SDK internal configuration
+  "defaultSigner" : {
+    "signerType" : "AWS4SignerType"
+  },
+  // "regionSigners" configuration takes precedence over
+  // the "serviceSigners" configuration,
+  // but not the "serviceRegionSigners" configuration
+  "serviceSigners" : [ 
+
+   {
+    "key" : "s3",
+    "config" : {
+      "signerType" : "AWSS3V4SignerType"
+    }
+  } ],
+  "regionSigners" : [ ],
+  "serviceRegionSigners" : [ {
+    "key" : "s3/cn-north-1",
+    "config" : {
+      "signerType" : "S3SignerType"
+    }
+  }
+],
+  // AWS http client internal configuration.
+  // Currently, only those http client with class name not following the usual
+  // convention of (Amazon|AWS).*(JavaClient|Client)
+  // needs to be explicitly configured.  Otherwise, the service name of an
+  // http client not explicitly configured will be derived automatically from
+  // the class name by removing the prefix and suffix as necessary.
+  "httpClients" : [ ],
+  "hostRegexToRegionMappings" : [ {
+    "hostNameRegex" : "(.+\\.)?s3.cn-north-1\\.amazonaws\\.com\\.cn",
+    "regionName"    : "cn-north-1"
+  } ],
+  "userAgentTemplate": "aws-sdk-{platform}/{version} {os.name}/{os.version} {java.vm.name}/{java.vm.version}/{java.version}{language.and.region}"
+}

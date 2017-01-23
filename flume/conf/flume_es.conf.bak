@@ -1,0 +1,70 @@
+agent.sources = api 
+agent.channels = mch fch
+agent.sinks = elasticSearch
+
+agent.sources.api.type = exec 
+agent.sources.api.command = tail -F /home/yangjian/es1/test/nginx_access.log
+agent.sources.api.restart = true
+agent.sources.api.logStdErr = true
+agent.sources.api.batchSize = 100
+agent.sources.api.channels = fch
+
+agent.sources.api.interceptors =i2 i1 
+
+agent.sources.api.interceptors.i2.type = timestamp
+
+agent.sources.api.interceptors.i1.type = regex_extractor
+agent.sources.api.interceptors.i1.regex = ([^\\s]*)\\s-\\s([^\\s]*)\\s\\[(.*)\\]\\s+\\"([\\S]*)\\s+([\\S]*)\\s+[\\S]*\\"\\s+(\\d+)\\s+(\\d+)\\s+\\"([^\\"]*)\\"\\s+\\"([^\\"]*)\\"\\s+\\"([^\\"]*)\\"\\s+\\"([^\\"]*)\\"\\s+\\"([^\\"]*)\\"\\s+\\"([^\\"]*)\\"
+agent.sources.api.interceptors.i1.serializers = s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 s11 s12 s13
+agent.sources.api.interceptors.i1.serializers.s1.name = remote_addr
+agent.sources.api.interceptors.i1.serializers.s2.name = remote_user
+agent.sources.api.interceptors.i1.serializers.s3.name = datetime
+#这里的时间已经是ISO8601格式，kibana可以直接识别为时间格式，所以下面的3行可以不用
+#agent.sources.api.interceptors.i1.serializers.s3.type = org.apache.flume.interceptor.RegexExtractorInterceptorMillisSerializer
+#agent.sources.api.interceptors.i1.serializers.s3.name = timestamp
+#agent.sources.api.interceptors.i1.serializers.s3.pattern  = yyyy-MM-dd'T'HH:mm:ssZ
+agent.sources.api.interceptors.i1.serializers.s4.name = http_method
+agent.sources.api.interceptors.i1.serializers.s5.name = uri
+agent.sources.api.interceptors.i1.serializers.s6.name = status
+agent.sources.api.interceptors.i1.serializers.s7.name = body_length
+agent.sources.api.interceptors.i1.serializers.s8.name = http_referer
+agent.sources.api.interceptors.i1.serializers.s9.name = user_agent
+agent.sources.api.interceptors.i1.serializers.s10.name = http_x_forwarded_for
+agent.sources.api.interceptors.i1.serializers.s11.name = request_time
+agent.sources.api.interceptors.i1.serializers.s12.name = upstream_addr
+agent.sources.api.interceptors.i1.serializers.s13.name = upstream_response_time
+
+agent.sinks.elasticSearch.type = org.apache.flume.sink.elasticsearch.ElasticSearchSink
+#agent.sinks.elasticSearch.type = com.frontier45.flume.sink.elasticsearch2.ElasticSearchSink
+agent.sinks.elasticSearch.channel = fch
+agent.sinks.elasticSearch.batchSize = 2000
+agent.sinks.elasticSearch.hostNames = 10.70.108.96:9300 
+agent.sinks.elasticSearch.indexName = nginx-hyku
+agent.sinks.elasticSearch.indexType = nginx-hyku
+agent.sinks.elasticSearch.clusterName = hyku
+agent.sinks.elasticSearch.client = transport
+agnet.sinks.elasticSearch.ttl = 5
+agent.sinks.elasticSearch.serializer = org.apache.flume.sink.elasticsearch.ElasticSearchNginxEventSerializer
+agnet.sinks.elasticSearch.serializer.fields = status
+agnet.sinks.elasticSearch.serializer.fields.status.serializer = int
+
+
+
+# Each sink's type must be defined
+agent.sinks.loggerSink.type = logger
+
+#Specify the channel the sink should use
+agent.sinks.loggerSink.channel = mch
+
+
+
+# Each channel's type is defined.
+agent.channels.mch.type = memory
+agent.channels.mch.capacity = 2000
+agent.channels.mch.transactionCapacity = 2000
+agent.channels.mch.byteCapacityBufferPercentage = 20
+agent.channels.mch.keep-alive = 30
+
+agent.channels.fch.type = file
+agent.channels.fch.checkpointDir = /home/yangjian/flume/data/checkpointDir 
+agent.channels.fch.dataDirs = /home/yangjian/flume/data/dataDirs
