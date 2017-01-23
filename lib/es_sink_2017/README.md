@@ -1,16 +1,3 @@
-# Flume 1.6.0 supporting ElasticSearch 5.0
-Base on: https://github.com/arberzal/flume-ng-elasticsearch2-sink
-
-This version of the Flume ElasticSearch sink works with ElasticSearch 5.0
-but to do so, **some libraries used by Flume had to be updated to the newest
-versions**,  **For this reason, many tests do not work retuning a pretty "jar
-hell" exception.**
-
-As Flume is packaged right now (sink and flume libraries in the  same class 
-loader) seems difficult to find another solution. The best way, without
-modifying Flume, would be a new ElasticSearch sink based on http API and 
-built on top of a reactive framework.
-
 ## Modifications to your Flume lib path:
     
 ### Libraries to be added:
